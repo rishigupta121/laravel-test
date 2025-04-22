@@ -39,8 +39,7 @@ class UploadController extends Controller
  *         response=201,
  *         description="File uploaded successfully",
  *         @OA\JsonContent(
- *             @OA\Property(property="filename", type="string", example="document.pdf"),
- *             @OA\Property(property="url", type="string", format="url", example="https://bucket.s3.amazonaws.com/uploads/document.pdf")
+ *             @OA\Property(property="message", type="string", example="File uploaded successfully")
  *         )
  *     ),
  *     @OA\Response(
@@ -114,6 +113,7 @@ class UploadController extends Controller
  */
     public function index()
     {
+        
         $files = Upload::all()->map(function ($file) {
             return [
                 'filename' => $file->filename,

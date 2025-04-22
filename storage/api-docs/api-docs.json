@@ -40,14 +40,9 @@
                             "application/json": {
                                 "schema": {
                                     "properties": {
-                                        "filename": {
+                                        "message": {
                                             "type": "string",
-                                            "example": "document.pdf"
-                                        },
-                                        "url": {
-                                            "type": "string",
-                                            "format": "url",
-                                            "example": "https://bucket.s3.amazonaws.com/uploads/document.pdf"
+                                            "example": "File uploaded successfully"
                                         }
                                     },
                                     "type": "object"
