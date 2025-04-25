@@ -21,8 +21,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /var/www/laravel-app/
-          git pull origin main
-          composer install --no-interaction --prefer-dist --optimize-autoloader
+          sudo git pull origin main
           php artisan migrate --force
           php artisan config:cache
           php artisan route:cache
